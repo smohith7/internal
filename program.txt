@@ -1,0 +1,18 @@
+mport {useState} from "react"
+function App() {
+  const [data,setdata]=useState("welcome");
+  const loginacc=() => {
+    setdata("login success");
+  }
+  const createacc=() => {
+    setdata('created account successfully');
+  }
+  return (
+    <div>
+      <button onClick={loginacc}>Signin:</button>
+      <button onClick={createacc}>Signup:</button>
+      <h1>{data}</h1>
+    </div>
+  );
+}
+export default App;
